@@ -5,9 +5,7 @@ import { Players } from './../api/players';
 
 class App extends Component{
   render(){
-    Tracker.autorun(function(){
-       console.log(Players.find().fetch());
-    });
+    
     return(
       <div>
 
