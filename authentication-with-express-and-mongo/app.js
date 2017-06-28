@@ -2,7 +2,15 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 let mongoose = require('mongoose');
+let session = require('express-session');
 
+// Use sessions to track logins
+
+app.use(session({
+  secret: "authentication and authorization",
+  resave: true,
+  saveUninitialized: false
+}))
 
 //  MongoDB connect
 
