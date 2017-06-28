@@ -24,6 +24,12 @@ router.get('/register', (req, res, next) => {
   return res.render('register', { title: 'Sign Up'});
 });
 
+// GET /login
+
+router.get('/login', (req, res, next) =>{
+  return res.render('login', {title: 'Log In'});
+});
+
 
 // POST /register
 router.post('/register', (req, res, next) => {
@@ -58,5 +64,27 @@ router.post('/register', (req, res, next) => {
   }
 });
 
+
+// POST /login
+
+router.post('/login' , (req, res, next) =>{
+  if(req.body.email && req.body.password){
+
+    User.authenticate(req.body.email, req.body.password, ( err, user ) => {
+      if (err || !user){
+        let err = new Error(" Wrong Username or password");
+        err.status = 401;
+        return next(err);
+      }else{
+        req.session.userId  = user._id;
+        return res.redirect('/profile');
+      }
+    });
+  }else{
+    let err = new Error(" Email and password are required!");
+    err.status = 401;
+    return next(err);
+  }
+});
 
 module.exports = router;
