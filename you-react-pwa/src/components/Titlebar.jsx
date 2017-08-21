@@ -1,11 +1,23 @@
 import React, { Component } from "react";
-import { Nav, NavItem, Navbar } from "react-bootstrap";
+import { Nav, NavItem, Navbar, FormGroup, FormControl, Button } from "react-bootstrap";
 import "./Titlebar.css";
 
 export default class Titlebar extends Component {
+  constructor(props){
+    super(props)
+    this.state ={
+      searckey:''
+    }
+  }
+
   renderMusicVideos() {
     this.props.videoSearch("music videos");
   }
+
+  handleSubmit(){
+    this.props.videoSearch(this.state.searckey);
+  }
+
   renderTvSows() {
     this.props.videoSearch("episodes");
   }
@@ -45,6 +57,13 @@ export default class Titlebar extends Component {
                 TV Sows
               </NavItem>
             </Nav>
+            <Navbar.Form pullRight>
+            <FormGroup>
+              <FormControl type="text" placeholder="Search" onChange={(e) => this.setState({searckey: e.target.value})}/>
+            </FormGroup>
+            {' '}
+            <Button type="submit" onClick={ this.handleSubmit.bind(this) }>Submit</Button>
+          </Navbar.Form>
           </Navbar.Collapse>
         </Navbar>
       </div>
