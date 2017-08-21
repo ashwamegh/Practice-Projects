@@ -8,8 +8,13 @@ const VideoList = props => {
   return (
     <div className="col-md-12 list-group">
       {videos.map(video =>
-        <a href={`https://www.youtube.com/watch?v${video.id}`}  key={video.etag}  target="_blank">
-          <VideoListItem video={video}/>
+        <a
+          href={`https://www.youtube.com/watch?v${video.id}`}
+          key={video.etag}
+          target="_blank"
+          rel="noopener"
+        >
+          <VideoListItem video={video} />
         </a>
       )}
     </div>
