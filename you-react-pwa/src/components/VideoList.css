@@ -1,0 +1,23 @@
+a{
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.list-group-item{
+  margin: 20px 0;
+}
+
+.list-group-item:hover{
+  transition: 0.7s all ease-in-out;
+  background-color: rgb(230, 223, 223) !important;
+}
+
+h5{
+  font-size: 1.6rem;
+}
+.media-body{
+  text-align: left;
+}
+
+.media-body p{
+  margin-top: 15px;
+}
