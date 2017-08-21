@@ -19,7 +19,7 @@ const VideoListItem = props => {
           <img
             src={imageUrl}
             alt=""
-            className="media-object"
+            className="media-object banner"
             style={{ height: "120px" }}
           />
         </div>
