@@ -21,3 +21,9 @@ h5{
 .media-body p{
   margin-top: 15px;
 }
+
+@media only screen and (max-width: 596px) {
+  .banner{
+    height: 80px !important;
+  }
+}
