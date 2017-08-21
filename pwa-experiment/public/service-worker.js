@@ -6,6 +6,7 @@ var CACHE_NAME = 'my-pwa-cache-v1';
 
 // Delete old caches that are not our current one!
 self.addEventListener("activate", event => {
+  console.log("Ruunin i am");
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys()

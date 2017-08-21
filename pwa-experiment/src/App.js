@@ -23,6 +23,9 @@ const Page = ({ title }) =>
     <p>
       <Link to="/settings">Settings</Link>
     </p>
+    <p>
+      <Link to="/">Home</Link>
+    </p>
   </div>;
 
 const Home = props => <Page title="Home" />;
