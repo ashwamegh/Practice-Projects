@@ -1,0 +1,15 @@
+{
+  "name": "notes-node",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Shashank Shekhar",
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
