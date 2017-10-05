@@ -8,7 +8,14 @@
   <body>
     <div id="root">
       <input type="text" name="name" value="" v-model=message>
-      <p>{{message}}</p>
+      <p>{{ message }}</p>
+      <h1>{{ tagline }}</h1>
+      <ul>
+        <li v-for="name in nameArray">{{name}}</li>
+      </ul>
+      <input type="text" id="nameInput" v-model="nameInput"/>
+      <!-- <button id="addName" v-on:click="addName">Add Name</button> -->
+      <button id="addName" @click="addName">Add Name</button>
     </div>
   </body>
   <script src="/index.js" charset="utf-8"></script>
