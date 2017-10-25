@@ -1,0 +1,5 @@
+# Discard node modules
+node_modules/
+
+# Discard Environment variables
+.env
