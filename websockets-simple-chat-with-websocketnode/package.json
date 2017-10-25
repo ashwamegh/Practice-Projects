@@ -1,0 +1,19 @@
+{
+  "name": "websockets-simple-chat-with-websocketnode",
+  "version": "1.0.0",
+  "description": "A simple webscokets applications using websockets node packge",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "NodeJS",
+    "Websockets",
+    "Server",
+    "Chat",
+    "Client"
+  ],
+  "author": "Shashank Shekhar",
+  "license": "ISC",
+  "dependencies": {}
+}
