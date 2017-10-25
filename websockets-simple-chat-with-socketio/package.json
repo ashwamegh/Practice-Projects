@@ -4,7 +4,8 @@
   "description": "A simple chat application using websockets with socket io",
   "main": "app.js",
   "scripts": {
-    "test": "node test"
+    "test": "./node_modules/.bin/nodemon app",
+    "start": "node app"
   },
   "keywords": [
     "Node",
@@ -14,5 +15,12 @@
     "realtime"
   ],
   "author": "Shashank Shekhar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
 }
