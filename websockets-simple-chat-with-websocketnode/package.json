@@ -15,5 +15,7 @@
   ],
   "author": "Shashank Shekhar",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "websocket": "^1.0.25"
+  }
 }
