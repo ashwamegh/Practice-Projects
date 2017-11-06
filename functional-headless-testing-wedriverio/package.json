@@ -1,0 +1,24 @@
+{
+  "name": "functional-headless-testing-wedriverio",
+  "version": "1.0.0",
+  "description": "Functional Headless testing using webdriverio Selenium and PhantomJS",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "mocha src/test/test"
+  },
+  "keywords": [
+    "Selenium",
+    "PhantomJS",
+    "MochaJS",
+    "Functional",
+    "Testing"
+  ],
+  "author": "Shashank Shekhar",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "wdio-mocha-framework": "^0.5.11",
+    "webdriverio": "^4.8.0"
+  }
+}
