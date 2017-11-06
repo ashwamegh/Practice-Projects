@@ -4,7 +4,7 @@
   "description": "Functional Headless testing using webdriverio Selenium and PhantomJS",
   "main": "src/app.js",
   "scripts": {
-    "test": "mocha src/test/test"
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "keywords": [
     "Selenium",
