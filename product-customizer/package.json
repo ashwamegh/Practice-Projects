@@ -1,0 +1,28 @@
+{
+  "name": "product-customizer",
+  "version": "1.0.0",
+  "description": "A POC to learn about riot js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000"
+  },
+  "keywords": [
+    "riotjs",
+    "webpack",
+    "es6"
+  ],
+  "author": "Shashank Shekhar",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "riot": "^3.9.0",
+    "riot-compiler": "^3.4.0",
+    "riot-hot-reload": "^1.0.0",
+    "riot-tag-loader": "^2.0.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}

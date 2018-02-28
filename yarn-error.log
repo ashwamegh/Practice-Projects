@@ -1,0 +1,32 @@
+Arguments: 
+  /home/ashwamegh/.nvm/versions/node/v8.5.0/bin/node /usr/share/yarn/bin/yarn.js start
+
+PATH: 
+  /home/ashwamegh/bin:/home/ashwamegh/xiki-project/bin:/home/linuxbrew/.linuxbrew/bin:/home/ashwamegh/.nvm/versions/node/v8.5.0/bin:/home/ashwamegh/xiki-project/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/bin:/home/ashwamegh/bin:/home/ashwamegh/xiki-project/bin:/home/linuxbrew/.linuxbrew/bin:/home/ashwamegh/xiki-project/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/bin:/home/ashwamegh/.rvm/gems/ruby-2.4.1/bin:/home/ashwamegh/.rvm/gems/ruby-2.4.1@global/bin:/usr/share/rvm/rubies/ruby-2.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/share/rvm/bin:/home/ashwamegh/Android/Sdk/tools:/home/ashwamegh/Android/Sdk/platform-tools:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/ashwamegh/Android/Sdk/tools:/home/ashwamegh/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.5.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find a package.json file in "/home/ashwamegh/Documents/Practice-Projects"
+      at new MessageError (/usr/share/yarn/lib/cli.js:186:110)
+      at /usr/share/yarn/lib/cli.js:40048:15
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:98:30)
+      at /usr/share/yarn/lib/cli.js:109:13
+      at <anonymous>
