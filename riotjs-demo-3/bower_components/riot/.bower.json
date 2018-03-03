@@ -1,0 +1,59 @@
+{
+  "name": "riot",
+  "version": "3.9.0",
+  "description": "A React-like user interface micro-library",
+  "homepage": "http://riotjs.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/riot/riot.git"
+  },
+  "authors": [
+    "Gianluca Guarini https://github.com/GianlucaGuarini"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "custom tags",
+    "custom elements",
+    "web components",
+    "virtual dom",
+    "shadow dom",
+    "polymer",
+    "react",
+    "jsx",
+    "minimal",
+    "minimalist",
+    "client-side",
+    "framework",
+    "declarative",
+    "templating",
+    "template",
+    "data binding",
+    "mvc",
+    "router",
+    "model",
+    "view",
+    "controller",
+    "riotjs",
+    "riot.js"
+  ],
+  "ignore": [
+    "**/*",
+    "!/riot.js",
+    "!/riot.min.js",
+    "!/riot.csp.js",
+    "!/riot.csp.min.js",
+    "!/riot+compiler.js",
+    "!/riot+compiler.min.js"
+  ],
+  "main": "riot.js",
+  "_release": "3.9.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.9.0",
+    "commit": "12b37c635d0454791f554ebb59f8a17df678736f"
+  },
+  "_source": "https://github.com/muut/riotjs.git",
+  "_target": "^3.9.0",
+  "_originalSource": "riot",
+  "_direct": true
+}
