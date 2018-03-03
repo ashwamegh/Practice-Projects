@@ -4,20 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Riot JS Demo 1</title>
+  <title>Riot JS Demo 2</title>
 </head>
 <body>
-  <h1>Let's Learn Riot-Js</h1>
-  <hello-world greet="Shashank"></hello-world>
-  <hello-world greet="Saurabh"></hello-world>
-  <hello-world></hello-world>
-  <hello-form></hello-form>
+
+  <contact-list></contact-list>
 
   <script src="bower_components/riot/riot+compiler.js"></script>
   <script src="tags/all.js"></script>
   <script>
-    riot.mount('hello-world', {greet:"Ashwamegh"});
-    riot.mount('hello-form', {greeting:"Anonymous"});
+    // const peeps = [ {first: "Shashank", last:"Shekhar"}, {first: "Saurabh", last:"Sharma"}];
+
+    const tagCallback = (customTag)  => {
+      console.log("Callback Executed");
+      const request = new XMLHttpRequest();
+      request.open('GET','people.json', true);
+      request.onload = () =>{
+        if( request.status === 200){
+          console.log("Good Status");
+          const data = JSON.parse(request.responseText);
+          customTag.trigger('data_loaded', data.people);
+        }
+      }
+      request.send();
+    }
+
+    riot.mount('contact-list', { callback : tagCallback  });
   </script>
 </body>
 </html>
