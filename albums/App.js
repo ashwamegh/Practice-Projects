@@ -1,43 +1,23 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-import React, { Component } from "react";
-import { Platform, StyleSheet, Text, Image, View } from "react-native";
-
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
-  android:
-    "Double tap R on your keyboard to reload,\n" +
-    "Shake or press menu button for dev menu"
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends React.Component {
   render() {
-    const pic = {
-      uri:
-        "https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg"
-    };
     return (
-      <View>
-        <Text>Hello World!</Text>
-        <Image source={pic.uri} style={{width: 193, height: 110}}/>
+      <View style={styles.container}>
+        <Text>Open up App.js to start working on your app!</Text>
+        <Text>Changes you make will automatically reload.</Text>
+        <Text>Shake your phone to open the developer menu.</Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  hello: {
-    position: "absolute",
-    top: "50%",
-    left: "50%"
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  image:{
-    width: '100%',
-    height:'auto'
-  }
 });
