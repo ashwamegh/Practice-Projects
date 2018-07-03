@@ -1,16 +1,21 @@
 //  Imports
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
-const Header = (props) => {
-  const { textStyle, viewStyle } = styles;
+class Header extends Component {
 
-  return (
-    <View style={viewStyle}>
-      <Text style={textStyle}>{props.headerText}</Text>
-    </View>
-  );
-};
+  render() {
+    const { textStyle, viewStyle } = styles;
+    const { headerText } = this.props;
+
+    return (
+      <View style={viewStyle}>
+        <Text style={textStyle}>{headerText}</Text>
+      </View>
+    );
+  }
+
+}
 
 const styles = {
   viewStyle: {
