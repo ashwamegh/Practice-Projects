@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello VueJS</title>
+    <script src="https://unpkg.com/vue" charset="utf-8"></script>
+    <style>
+      .color-red{
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <input type="text" name="name" value="" v-model="message">
+      <p>{{ message }}</p>
+      <h1>{{ tagline }}</h1>
+      <ul>
+        <li v-for="name in nameArray">{{name}}</li>
+      </ul>
+      <input type="text" id="nameInput" v-model="nameInput"/>
+      <!-- <button id="addName" v-on:click="addName">Add Name</button> -->
+      <h3>Vue Event Listeners</h3>
+      <button id="addName" @click="addName">Add Name</button>
+      <br/>
+      <br/>
+      <h3>Vue Attributes and Class Bindings</h3>
+      <button v-bind:title="title">Hover Over Me</button>
+      <button :class="className">I am red class button</button>
+      <button :disabled="disabled" @click="toggleDisable">Toggle disable</button>
+      <br/>
+      <br/>
+      <h3>The Need for Computed Properties</h3>
+      <h4>All Tasks</h4>
+      <ul>
+        <li v-for="task in tasks"><input type="checkbox"><span v-text="task.description"></span></li>
+      </ul>
+      <h4>Incomplete Tasks</h4>
+      <ul>
+        <li v-for="task in incompleteTasks"><input type="checkbox"><span v-text="task.description"></span></li>
+      </ul>
+      <br/>
+      <br/>
+    </div>
+  </body>
+  <script src="/index.js" charset="utf-8"></script>
+</html>
