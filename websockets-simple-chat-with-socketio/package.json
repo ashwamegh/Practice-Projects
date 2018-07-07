@@ -1,0 +1,26 @@
+{
+  "name": "websockets-simple-chat-with-socketio",
+  "version": "1.0.0",
+  "description": "A simple chat application using websockets with socket io",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/nodemon app",
+    "start": "node app"
+  },
+  "keywords": [
+    "Node",
+    "Sockets",
+    "websockets",
+    "io",
+    "realtime"
+  ],
+  "author": "Shashank Shekhar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

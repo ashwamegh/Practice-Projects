@@ -1,0 +1,27 @@
+{
+  "name": "functional-headless-testing",
+  "version": "1.0.0",
+  "description": "Selenium powered web browser testing with phantomjs as a headless browser",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "mocha",
+    "chai",
+    "phantomjs",
+    "selenium",
+    "headless",
+    "browser"
+  ],
+  "author": "Shashank Shekhar",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "webdriverio": "^4.8.0",
+    "webdriverjs": "^1.7.5"
+  }
+}

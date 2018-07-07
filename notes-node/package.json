@@ -1,0 +1,21 @@
+{
+  "name": "notes-node",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Shashank Shekhar",
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
