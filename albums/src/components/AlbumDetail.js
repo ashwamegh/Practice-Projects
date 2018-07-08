@@ -1,6 +1,6 @@
 // ===================  Imports ======================= //
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 
 import Card from './Card';
 import CardSection from './CardSection';
@@ -8,16 +8,25 @@ import Button from './Button';
 
 const AlbumDetail = props => {
   const { album } = props;
-  const { headerContentStyle, thumbnailStyle, thumbnailContainerStyle, imageStyle, headerTextStyle } = styles;
+  const {
+    headerContentStyle,
+    thumbnailStyle,
+    thumbnailContainerStyle,
+    imageStyle,
+    headerTextStyle
+  } = styles;
 
   return (
     <Card>
       <CardSection>
-      <View style={thumbnailContainerStyle}>
-        <Image source={{ uri: album.thumbnail_image }} style={thumbnailStyle} />
-      </View>
+        <View style={thumbnailContainerStyle}>
+          <Image
+            source={{ uri: album.thumbnail_image }}
+            style={thumbnailStyle}
+          />
+        </View>
         <View style={headerContentStyle}>
-          <Text style={headerTextStyle} >{album.title}</Text>
+          <Text style={headerTextStyle}>{album.title}</Text>
           <Text>{album.artist}</Text>
         </View>
       </CardSection>
@@ -27,7 +36,7 @@ const AlbumDetail = props => {
       </CardSection>
 
       <CardSection>
-        <Button onPress={() => console.log(album.title)} />
+        <Button onPress={() => Linking.openURL(album.url)}>Touch Me !!!</Button>
       </CardSection>
     </Card>
   );
