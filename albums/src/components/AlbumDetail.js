@@ -27,7 +27,7 @@ const AlbumDetail = props => {
       </CardSection>
 
       <CardSection>
-        <Button />
+        <Button onPress={() => console.log(album.title)} />
       </CardSection>
     </Card>
   );
