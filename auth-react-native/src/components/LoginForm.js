@@ -1,22 +1,26 @@
 // ====================== Global imports ================== //
 import React, { Component } from 'react';
-import { View, TextInput } from 'react-native';
-import { Button, Card, CardSection } from './common';
+import { TextInput } from 'react-native';
+import { Button, Card, CardSection, Input  } from './common';
 
 
 // ================== Component Decalration ============== //
 
 class LoginForm extends Component {
+  state = {
+    email: ''
+  }
+
   render() {
-    const { emailInputStyle } = styles;
+    const { email } = this.state;
 
     return (
       <Card>
         <CardSection>
-          <TextInput style={emailInputStyle} />
+          <Input label="Email" value={email} onChangeText={ email => this.setState({email})} />
         </CardSection>
         <CardSection>
-          <TextInput style={emailInputStyle} />
+        <Input value={email} onChangeText={ email => this.setState({email})} />
         </CardSection>
         <CardSection>
           <Button>
@@ -28,11 +32,5 @@ class LoginForm extends Component {
   }
 }
 
-const styles = {
-  emailInputStyle: {
-    height: 20,
-    width: '100%',
-  },
-};
 
 export default LoginForm;
