@@ -60,11 +60,9 @@ class LoginForm extends Component {
             onChangeText={password => this.setState({ password })}
           />
         </CardSection>
-        <CardSection>
-          <Text style={errorTextStyle}>
-            {error}
-          </Text>
-        </CardSection>
+        <Text style={errorTextStyle}>
+          {error}
+        </Text>
         <CardSection>
           <Button onPress={this.onButtonPress}>
             {'Log In'}
