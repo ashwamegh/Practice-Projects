@@ -51,7 +51,9 @@ class LoginForm extends Component {
     });
   }
 
-  onLoginfail() {
+  onLoginfail(error) {
+    console.log(error);
+
     this.setState({
       email: '',
       password: '',
