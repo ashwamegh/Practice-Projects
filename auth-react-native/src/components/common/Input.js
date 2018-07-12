@@ -7,7 +7,7 @@ import { View, TextInput, Text } from 'react-native';
 const Input = (props) => {
   const { inputStyle, labelStyle, containerStyle } = styles;
   const {
-    label, onchangeText, value,
+    label, onChangeText, value, placeholder, secureTextEntry,
   } = props;
 
   return (
@@ -16,15 +16,21 @@ const Input = (props) => {
         {label}
       </Text>
 
-      <TextInput style={inputStyle} onchangeText={onchangeText} value={value} />
+      <TextInput
+        secureTextEntry={secureTextEntry}
+        underlineColorAndroid="transparent"
+        placeholder={placeholder}
+        autoCorrect={false}
+        style={inputStyle}
+        onChangeText={onChangeText}
+        value={value}
+      />
     </View>
   );
 };
 
 const styles = {
   inputStyle: {
-    height: 20,
-    width: 100,
     color: '#000',
     paddingRight: 5,
     paddingLeft: 5,
