@@ -6,12 +6,13 @@ import { Card } from "./common";
 
 class LibraryList extends Component {
   render() {
+    console.log(this.props);
     return <Card />;
   }
 }
 
 const mapStateToProps = state => {
-  return { library: state.library };
+  return { libraries: state.libraries };
 };
 
 export default connect(
