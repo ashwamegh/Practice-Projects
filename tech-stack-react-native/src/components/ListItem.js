@@ -1,6 +1,11 @@
 // ===================  Imports ======================= //
 import React, { Component } from "react";
-import { View, Text, TouchableWithoutFeedback } from "react-native";
+import {
+  View,
+  Text,
+  TouchableWithoutFeedback,
+  LayoutAnimation
+} from "react-native";
 import { connect } from "react-redux";
 import { CardSection } from "./common";
 import * as actions from "./../actions";
@@ -8,22 +13,27 @@ import * as actions from "./../actions";
 // Component Declaration
 
 class ListItem extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.renderDescription = this.renderDescription.bind(this);
   }
 
-  renderDescription(){
-    const { library,selectedLibraryId } = this.props;
+  componentWillUpdate() {
+    LayoutAnimation.spring();
+  }
 
-    if(library.id === selectedLibraryId){
+  renderDescription() {
+    const { expanded, library } = this.props;
+
+    if (expanded) {
       return (
-        <Text>
-          { library.description }
-        </Text>
-      )
+        <CardSection>
+          <Text style={{ flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+            {library.description}
+          </Text>
+        </CardSection>
+      );
     }
   }
 
@@ -32,12 +42,12 @@ class ListItem extends Component {
     const { titleStyle } = styles;
 
     return (
-      <TouchableWithoutFeedback onPress={ () => selectLibrary(library.id)}>
+      <TouchableWithoutFeedback onPress={() => selectLibrary(library.id)}>
         <View>
           <CardSection>
             <Text style={titleStyle}>{library.title}</Text>
           </CardSection>
-        { this.renderDescription() }
+          {this.renderDescription()}
         </View>
       </TouchableWithoutFeedback>
     );
@@ -51,11 +61,11 @@ const styles = {
   }
 };
 
-const mapStateToProps = (state) => {
-  return ({
-    selectedLibraryId : state.selectedLibraryId
-  })
-}
+const mapStateToProps = (state, ownProps) => {
+  return {
+    expanded: state.selectedLibraryId === ownProps.library.id
+  };
+};
 
 export default connect(
   mapStateToProps,
