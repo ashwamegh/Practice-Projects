@@ -7,7 +7,7 @@ import * as actions from "./../actions";
 
 // Component Declaration
 
-class ListIten extends Component {
+class ListItem extends Component {
 
   constructor(props){
     super(props);
@@ -16,7 +16,8 @@ class ListIten extends Component {
   }
 
   renderDescription(){
-    const { library, selectedLibraryId } = this.props;
+    const { library,selectedLibraryId } = this.props;
+
     if(library.id === selectedLibraryId){
       return (
         <Text>
@@ -50,7 +51,13 @@ const styles = {
   }
 };
 
+const mapStateToProps = (state) => {
+  return ({
+    selectedLibraryId : state.selectedLibraryId
+  })
+}
+
 export default connect(
-  null,
+  mapStateToProps,
   actions
-)(ListIten);
+)(ListItem);
