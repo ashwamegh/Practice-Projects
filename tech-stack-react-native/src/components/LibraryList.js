@@ -15,7 +15,9 @@ class LibraryList extends Component {
   }
 
   renderRow(library) {
-    return <ListItem library={library} />;
+    const{ selectedLibraryId } = this.props;
+    
+    return <ListItem library={library} selectedLibraryId={selectedLibraryId} />;
   }
 
   render() {
@@ -24,7 +26,10 @@ class LibraryList extends Component {
 }
 
 const mapStateToProps = state => {
-  return { libraries: state.libraries };
+  return {
+    libraries: state.libraries,
+    selectedLibraryId: state.selectedLibraryId
+  };
 };
 
 export default connect(
