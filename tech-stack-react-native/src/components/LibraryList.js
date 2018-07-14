@@ -5,6 +5,13 @@ import { connect } from "react-redux";
 import ListItem from "./ListItem";
 
 class LibraryList extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.renderRow = this.renderRow.bind(this);
+  }
+
   componentWillMount() {
     const { libraries } = this.props;
     const ds = new ListView.DataSource({
@@ -15,9 +22,8 @@ class LibraryList extends Component {
   }
 
   renderRow(library) {
-    const{ selectedLibraryId } = this.props;
     
-    return <ListItem library={library} selectedLibraryId={selectedLibraryId} />;
+    return <ListItem library={library}/>;
   }
 
   render() {
