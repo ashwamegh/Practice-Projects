@@ -1,6 +1,9 @@
 //  Imports
 import React, { Component } from "react";
+import { connect } from 'react-redux';
 import { Card, CardSection, Input, Button } from "./common";
+
+import actions from './../actions';
 
 class LoginForm extends Component {
 
@@ -12,7 +15,9 @@ class LoginForm extends Component {
   }
 
   onEmailChange(email){
-    console.log(email);
+    const { emailChanged }  = this.props;
+
+    emailChanged(email);
   }
 
   onPasswordChange(password){
@@ -37,4 +42,4 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
+export default connect(null, actions)(LoginForm);
