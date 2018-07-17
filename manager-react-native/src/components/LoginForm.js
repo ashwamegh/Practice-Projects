@@ -1,38 +1,49 @@
 //  Imports
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import { Card, CardSection, Input, Button } from "./common";
 
-import actions from './../actions';
+import { emailChanged, passwordChanged } from "./../actions";
 
 class LoginForm extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.onEmailChange = this.onEmailChange.bind(this);
     this.onPasswordChange = this.onPasswordChange.bind(this);
   }
 
-  onEmailChange(email){
-    const { emailChanged }  = this.props;
+  onEmailChange(email) {
+    const { emailChanged } = this.props;
 
     emailChanged(email);
   }
 
-  onPasswordChange(password){
-    console.log(password);
+  onPasswordChange(password) {
+    const { passwordChanged } = this.props;
+    passwordChanged(password);
   }
 
   render() {
+    const { email } = this.props;
 
     return (
       <Card>
         <CardSection>
-          <Input label="Email" placeholder="user@gmail.com" onChangeText={this.onEmailChange} />
+          <Input
+            label="Email"
+            placeholder="user@gmail.com"
+            value={email}
+            onChangeText={this.onEmailChange}
+          />
         </CardSection>
         <CardSection>
-          <Input secureTextEntry label="Password" placeholder="password" onChangeText={this.onPasswordChange} />
+          <Input
+            secureTextEntry
+            label="Password"
+            placeholder="password"
+            onChangeText={this.onPasswordChange}
+          />
         </CardSection>
         <CardSection>
           <Button>Login</Button>
@@ -42,4 +53,20 @@ class LoginForm extends Component {
   }
 }
 
-export default connect(null, actions)(LoginForm);
+const mapStateToProps = state => {
+  return {
+    email: state.auth.email
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    emailChanged: email => dispatch(emailChanged(email)),
+    passwordChanged: password => dispatch(passwordChanged(password))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginForm);
