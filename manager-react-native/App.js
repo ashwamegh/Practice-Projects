@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import ReduxThunk from 'redux-thunk';
 import firebase from "firebase";
 
 import reducers from "./src/reducers";
