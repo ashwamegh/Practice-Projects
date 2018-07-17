@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Card, CardSection, Input, Button } from "./common";
 
-import { emailChanged, passwordChanged } from "./../actions";
+import { emailChanged, passwordChanged, loginUser } from "./../actions";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -11,6 +11,7 @@ class LoginForm extends Component {
 
     this.onEmailChange = this.onEmailChange.bind(this);
     this.onPasswordChange = this.onPasswordChange.bind(this);
+    this.onButtonPress = this.onButtonPress.bind(this);
   }
 
   onEmailChange(email) {
@@ -22,6 +23,12 @@ class LoginForm extends Component {
   onPasswordChange(password) {
     const { passwordChanged } = this.props;
     passwordChanged(password);
+  }
+
+  onButtonPress(){
+    const { email, password, loginUser } = this.props;
+
+    loginUser({email, password});
   }
 
   render() {
@@ -46,7 +53,7 @@ class LoginForm extends Component {
           />
         </CardSection>
         <CardSection>
-          <Button>Login</Button>
+          <Button onPress={this.onButtonPress}>Login</Button>
         </CardSection>
       </Card>
     );
@@ -55,14 +62,16 @@ class LoginForm extends Component {
 
 const mapStateToProps = state => {
   return {
-    email: state.auth.email
+    email: state.auth.email,
+    password:state.auth.password
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     emailChanged: email => dispatch(emailChanged(email)),
-    passwordChanged: password => dispatch(passwordChanged(password))
+    passwordChanged: password => dispatch(passwordChanged(password)),
+    loginUser: ({email, password})=> dispatch(loginUser({email,password}))
   };
 };
 
