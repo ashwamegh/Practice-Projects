@@ -1,0 +1,21 @@
+{
+  "name": "learning-cheerio-scraping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cheerio",
+    "web",
+    "scraping",
+    "nodejs"
+  ],
+  "author": "Shashank Shekhar",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
