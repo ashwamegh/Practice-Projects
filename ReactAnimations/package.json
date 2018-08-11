@@ -1,0 +1,16 @@
+{
+  "name": "reactanimations",
+  "version": "1.0.0",
+  "description": "A poc to tesst out the addon react animations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "transitions",
+    "animation"
+  ],
+  "author": "Shashank Shekhar",
+  "license": "MIT"
+}
