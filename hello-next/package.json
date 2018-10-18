@@ -1,0 +1,19 @@
+{
+  "name": "hello-next",
+  "version": "1.0.0",
+  "description": "A sample application to test next js",
+  "main": "index.js",
+  "author": "Ashwamegh",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
